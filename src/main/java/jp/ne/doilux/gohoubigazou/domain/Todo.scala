@@ -10,6 +10,22 @@ case class Todo
   date: LocalDate
 ) {
 
+  def getId(): Integer = {
+    id
+  }
+
+  def getTitle(): String = {
+    title
+  }
+
+  def done(): Todo = {
+    Todo(id, title, Status.DONE, date)
+  }
+
+  def isDoing(): Boolean = {
+    status == Status.DOING
+  }
+
 }
 
 object Status extends Enumeration {
