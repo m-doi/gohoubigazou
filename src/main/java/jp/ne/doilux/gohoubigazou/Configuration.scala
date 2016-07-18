@@ -6,4 +6,5 @@ import org.springframework.context.annotation.ComponentScan
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan
-class Configuration
+class Configuration {
+}
