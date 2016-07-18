@@ -37,10 +37,8 @@ class TodoController {
   @RequestMapping(value = Array("/done"), method = Array(RequestMethod.POST))
   def done(@RequestParam("id") id: Integer): String = {
 
-    val todo: Todo = todoRepository.find(id)
-    val doneTodo: Todo = todo.done()
-    todoRepository.save(doneTodo)
-
+    val optTodo: Option[Todo] = todoRepository.find(id)
+    optTodo.foreach(s => todoRepository.save(s.done()))
     "redirect:/todo/"
   }
 

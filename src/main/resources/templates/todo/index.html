@@ -27,7 +27,7 @@
     </thead>
 
     <tbody>
-    <img th:if="${nodes.isEmpty()}" src="/img/gohoubi.jpg" alt="gohoubi"/>
+    <img th:if="${nodes.isEmpty()}" src="/img/gohoubi.jpg" height="600" width="800" alt="gohoubi"/>
     <tr th:each="node : ${nodes}">
         <td th:text="${node.title}">xxx</td>
         <td>

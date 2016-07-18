@@ -18,6 +18,14 @@ case class Todo
     title
   }
 
+  def getStatus(): Status = {
+    status
+  }
+
+  def getDate(): LocalDate = {
+    date
+  }
+
   def done(): Todo = {
     Todo(id, title, Status.DONE, date)
   }
