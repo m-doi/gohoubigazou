@@ -71,6 +71,9 @@ dependencies {
     // bootstrapやjQueryのバージョンを隠蔽する
     compile group: 'org.webjars', name: 'webjars-locator', version: '0.32'
 
+    // lombok
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.10'
+
     // JUnit
     testCompile("junit:junit")
 }

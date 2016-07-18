@@ -6,7 +6,7 @@ case class Todo
 (
   id: Integer,
   title: String,
-  status: Status.Value,
+  status: Status,
   date: LocalDate
 ) {
 
@@ -23,13 +23,9 @@ case class Todo
   }
 
   def isDoing(): Boolean = {
-    status == Status.DOING
+    status.isDoing
   }
 
-}
-
-object Status extends Enumeration {
-  val DOING, DONE = Value
 }
 
 
