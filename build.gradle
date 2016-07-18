@@ -46,8 +46,9 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    // Spring Boot（組み込みTomcatを除外）
+    // Spring Boot
     compile("org.springframework.boot:spring-boot-starter-web") {
+        // 組み込みTomcatを除外する。別にTomcatでもいいんだけど、Jettyの方が軽量らしい。
         exclude module: "spring-boot-starter-tomcat"
     }
 
