@@ -24,8 +24,8 @@ src/main/resources/static/img/に表示したい画像（gohoubi.jpg）をおい
 
 ## Licence
 
-[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
+[MIT](https://github.com/doilux/gohoubigazou/blob/master/LICENSE)
 
 ## Author
 
-[tcnksm](https://github.com/tcnksm)
+[doilux](https://github.com/doilux)
