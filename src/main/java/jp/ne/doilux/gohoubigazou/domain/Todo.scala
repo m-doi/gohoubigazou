@@ -8,23 +8,7 @@ case class Todo
   title: String,
   status: Status,
   date: LocalDate
-) {
-
-  def getId(): Integer = {
-    id
-  }
-
-  def getTitle(): String = {
-    title
-  }
-
-  def getStatus(): Status = {
-    status
-  }
-
-  def getDate(): LocalDate = {
-    date
-  }
+  ) {
 
   def done(): Todo = {
     Todo(id, title, Status.DONE, date)

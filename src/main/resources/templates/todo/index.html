@@ -12,6 +12,7 @@
 <h2>Todo app</h2>
 
 <h3>Add</h3>
+
 <form method="post" th:action="@{/todo/new}">
     <input type="text" name="title"/>
     <input type="submit" value="submit"/>
@@ -29,11 +30,11 @@
     <tbody>
     <img th:if="${nodes.isEmpty()}" src="/img/gohoubi.jpg" height="600" width="800" alt="gohoubi"/>
     <tr th:each="node : ${nodes}">
-        <td th:text="${node.title}">xxx</td>
+        <td th:text="${node.title()}">xxx</td>
         <td>
             <!--参考：http://blog.okazuki.jp/entry/2015/07/20/134739-->
             <form method="post" th:action="@{/todo/done}" th:object="${node}">
-                <input type="hidden" name="id" th:value="*{id}"/>
+                <input type="hidden" name="id" th:value="*{id()}"/>
                 <input type="submit" value="Done"/>
             </form>
         </td>

@@ -41,7 +41,7 @@ create table todo (
   }
 
   override def save(obj: Todo): Unit = {
-    val (status, id) = (obj.getStatus().getIndex(), obj.getId())
+    val (status, id) = (obj.status.getIndex(), obj.id)
     sql"update todo set done = ${status} where id = ${id}"
       .update.apply()
   }
